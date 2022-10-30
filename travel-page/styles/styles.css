@@ -1,7 +1,7 @@
 /* CSS stylesheet for index.html */
 #hero {
   height: 800px;
-  background-image: url("/images/places/travel_the_world-wallpaper-1920x1080.jpg");
+  background-image: url("../images/places/travel_the_world-wallpaper-1920x1080.jpg");
   background-position: center;
   background-size: cover;
 }
