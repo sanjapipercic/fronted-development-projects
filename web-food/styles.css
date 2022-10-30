@@ -1,0 +1,161 @@
+/* CSS stylesheet for index.html */
+body {
+  background-color: rgb(44, 41, 38);
+  color: rgba(238, 164, 80, 0.979);
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(29, 26, 24);
+  height: 5rem;
+  padding: 0 5%;
+  align-items: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+}
+header li {
+  margin: 0 1rem;
+}
+header nav a {
+  text-decoration: none;
+  color: rgb(185, 131, 31);
+  font-size: 1rem;
+}
+header nav a:hover {
+  color: rgb(228, 163, 44);
+}
+#page-logo {
+  font-size: 1.5rem;
+  /* margin-left: 100px;*/
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.menu-btn
+{
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+  
+}
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+main h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(238, 164, 80);
+}
+#side-drawer{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 26, 27);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#side-drawer header{
+  display: flex;
+  justify-content: flex-end;
+  height: 5rem;
+  padding: 0 5%;
+  align-items: center;
+
+}
+#side-drawer:target{
+  display: block;
+
+}
+#side-drawer ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 4rem 1rem; 
+}
+#side-drawer li{
+  margin: 1rem 0;
+  list-style: none;
+}
+#side-drawer a{
+  color: rgb(253, 239, 213);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#latest-products {
+  width: 80%;
+  margin: 2rem auto;
+}
+#latest-products ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.food-item {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.5s ease-out;
+}
+.food-item:hover{
+  transform: scale(1.05);
+}
+.food-item img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.food-item-content {
+  padding: 1rem;
+  text-align: center;
+}
+.food-item-content h2 {
+  font-size: 2rem;
+}
+.food-item-content a {
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(241, 138, 20, 0.979);
+  color: white;
+  border-radius: 8px;
+  font-weight: 400;
+}
+.food-item-content a:hover {
+  background-color: rgb(221, 134, 34);
+}
+/* Media query used for responsive design */
+/* 768px is a breakpoint */
+@media (max-width: 48rem) {
+  header nav a {
+    /* visibility: hidden;*/
+    display: none;
+  }
+  .menu-btn{
+    display: flex;
+  }
+  main h1 {
+    font-size: 1.5rem; 
+  }
+  #latest-products ul {
+    grid-template-columns: 100%;
+  }
+  
+}
