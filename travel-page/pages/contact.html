@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Oleo+Script:wght@700&family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <!-- Header and nav bar -->
+    <header>
+      <div id="page-logo">
+        <a href="/pages/index.html"> Travel Goals</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/pages/places.html">Destinations</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Contact form (html and css with validations, data is not saved) -->
+      <form action="#" method="GET">
+        <h1>Contact Me</h1>
+        <!-- Section for personal info -->
+        <section class="personal-info">
+          <h2>Personal information</h2>
+          <div class="exclamation">
+            <label for="user-name">Your Name: </label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+          </div>
+          <input type="text" id="user-name" name="username" required />
+
+          <label for="user-surname">Your Surname:</label>
+          <input type="text" id="user-surname" name="usersurname" />
+
+          <div class="exclamation">
+            <label for="user-email">Your E-mail:</label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+          </div>
+          <input type="email" name="useremail" id="user-email" required />
+
+          <label for="phone-number">Your phone number:</label>
+          <input type="number" name="user-phone-number" id="phone-number" />
+
+          <label for="dateOfBirth">Date of birth:</label>
+          <!-- Restriction for minors -->
+          <input
+            type="date"
+            name="date-birth"
+            id="dateofbirth"
+            min="1921-01-01"
+            max="2004-10-30"
+          />
+        </section>
+        <section class="message">
+          <hr />
+          <h2>Message</h2>
+          <div class="exclamation">
+            <label for="message">Your Message:</label>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+          </div>
+          <!-- Textarea -->
+          <textarea
+            name="user-message"
+            id="message"
+            cols="50"
+            rows="10"
+            required
+          ></textarea>
+          <hr />
+        </section>
+
+        <section class="contact">
+          <div class="exclamation">
+            <h2>How should we replay?</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+              />
+            </svg>
+          </div>
+          <!-- Radio buttons -->
+          <div class="contact-method">
+            <input type="radio" name="contact" id="byphone" required />
+            <label for="byphone">Call me</label>
+          </div>
+          <div class="contact-method">
+            <input type="radio" name="contact" id="byemail" required />
+            <label for="byemail">Send me an e-mail</label>
+          </div>
+          <div class="contact-method">
+            <input type="radio" name="contact" id="bynone" required />
+            <label for="">Don't replay</label>
+          </div>
+        </section>
+        <section>
+          <!-- Checkbox  -->
+          <div class="terms">
+            <input type="checkbox" name="terms" id="terms" required />
+            <label for="terms">Accept Terms</label>
+          </div>
+        </section>
+        <!-- Buttons for clearing fields and submiting -->
+        <section class="buttons">
+          <button id="reset" type="reset">Clear</button>
+          <button id="submit" type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com">
+            <img src="/images/icons/insta.png" alt="Instagram logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com">
+            <img src="/images/icons/facebook.png" alt="Facebook logo" />
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com">
+            <img
+              id="youtube-logo"
+              src="/images/icons/youtube.png"
+              alt="YouTube logo"
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
